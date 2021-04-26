@@ -1,0 +1,79 @@
+
+<!--Include Header-->
+<%-include('include/_header')%>
+<!--/Include Header-->
+
+
+<!--MainSection-->
+<main id= site-main>
+    <div class="container">
+        <div class="box-nav d-flex justify-between ">
+            <!--All users buttom-->
+            <div class="filter">
+                <a href="/"><i class="fas fa-angle-double-left"></i> All Users   </a>
+            </div>
+            <div class="form-title text-center">
+                <h2 class="text-dark ">Update User </h2>
+                <span class="text-light">Use the below form to Update an account  </span>
+
+            </div>
+            <!--AddForm-->
+            <form method="POST" id="update_user"  class="form-tot text-center">  
+                <div class="new_user">
+                    <!--Name-->
+                   <div class="form-group">
+                       <label for="name" class="text-light">Name</label>
+                       <input type="hidden" name="id" value="">
+                       <input type="text" name="name" id=""placeholder="Mark stonii">
+                    </div> 
+                    <!--Email-->
+                    <div class="form-group">
+                        <label for="Email" class="text-light">Email</label>
+                        <input type="text" name="Email" id=""placeholder="exmpl@gmail.com">
+                     </div> 
+                    <!--Gender-->
+                     <div class="form-group">
+                        <label for="gender" class="text-light">Gender</label>
+                        <div class="radio inline">
+                            <input type="radio" id="idMale" name="gender" value="Male">
+                            <label for="idMale" class="radio-label">Male</label>
+                         </div>
+                         <div class="radio inline">
+                            <input type="radio" id="idfem" name="gender" value="Female">
+                            <label for="idfem" class="radio-label">Female</label>
+                         </div>
+                     </div> 
+                    <!--Status-->
+                     <div class="form-group">
+                        <label for="status" class="text-light">Status</label>
+                        <div class="radio inline">
+                            <input type="radio" id="idac" name="status" value="Active">
+                            <label for="idac" class="radio-label">Active</label>
+                         </div>
+                         <div class="radio inline">
+                            <input type="radio" id="idinac" name="status" value="Inactive">
+                            <label for="idinac" class="radio-label">Inactive</label>
+                         </div>
+                     </div> 
+                    <!--savebtn-->
+                     <div class="form-group">
+                         <button type="button" class="btn text-dark update">Save</button>
+                     </div>
+            
+                </div>
+            
+            </form>
+          
+            <!--/AddForm-->
+        
+        
+        </div>
+     </div>
+</main>
+<!--/MainSection-->
+
+
+
+<!--Include footer-->
+<%-include('include/_footer')%>
+<!--/Include footer-->
