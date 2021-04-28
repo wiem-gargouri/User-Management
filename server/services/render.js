@@ -1,3 +1,6 @@
+const axios=require('axios');
+const { params } = require('../routes/router');
+
 exports.homeRoutes = (req,res)=>{
      //Make a get request to api/users
      axios.get("http://localhost:3000/api/users")
@@ -21,10 +24,10 @@ exports.adduser = (req,res)=>{
 exports.UpdateUser = (req,res)=>{
     axios.get("http://localhost:3000/api/users",{params:{id:req.query.id}})
     .then(function(userdata){
-        res.render('update',{user:userdata.data})
+        res.render("update",{user:userdata.data})
     })
     .catch(err=>{
-        res.send(err)
+        res.send(err);
     })
   
 }
